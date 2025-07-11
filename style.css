@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -13,6 +10,10 @@ html {
   font-size: 62.5%;
 }
 
+.body-bg {
+  background-color: var(--body-color);
+}
+
 /*? Reusable  */
 
 :root {
@@ -22,9 +23,12 @@ html {
   --card-heading: #1e1e1e;
   --card-reviewer: #b3b3b3;
   --bg-color: #eeeee4;
+  --body-color: #6664b110;
   --black-color: #000000;
+  --card-text-color: #757575;
+  --footer-nav: #8987a1;
+  --btn-hover-color: #ffa500;
 }
-
 
 .inter-text {
   font-family: "Inter", sans-serif;
@@ -35,7 +39,6 @@ html {
   color: var(--primary-color);
 }
 
-
 .raleway-text {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -43,13 +46,19 @@ html {
   font-style: normal;
 }
 
-.btn-primary{
-    padding: 1.2rem 3.6rem;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: none;
-    border-radius: .5rem .5rem;
+.btn-primary {
+  padding: 1.2rem 3.6rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 0.5rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.6rem;
 }
+
+
+
 /*? Header Design  */
 
 .container {
@@ -65,131 +74,235 @@ html {
   color: var(--primary-color);
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 5rem 0;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
 }
 
 /*? Banner Design */
 
-.banner{
-    margin: 15.8rem 11.75rem 15.2rem 11.75rem;
-    text-align: center;
+.banner {
+  margin: 15.8rem 11.75rem 15.2rem 11.75rem;
+  text-align: center;
 }
 
-.banner h1{
-    font-size: 6.5rem;
+.banner h1 {
+  font-size: 6.5rem;
 }
 
-.banner .btn-primary{
-    margin-top: 3.7rem;
+.banner .btn-primary {
+  margin-top: 3.7rem;
 }
 
 /*? Action Design */
 
-.action{
-    display: flex;
-    align-items: center;
-    margin: 11.7rem 15rem;
-    justify-content: space-between;
-    gap: 22rem;
+.action {
+  display: flex;
+  align-items: center;
+  margin: 11.7rem 15rem;
+  justify-content: space-between;
+  gap: 22rem;
 }
 
-.action h3{
-    font-size: 4.2rem;
-    color: var(--heading-color);
+.action h3 {
+  font-size: 4.2rem;
+  color: var(--heading-color);
 }
 
-.action p{
-    font-size: 2.4rem;
-    line-height: 3rem;
-    font-weight: 400;
-    display: inline-block;
-    padding: 2.3rem 0;
+.action p {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 400;
+  display: inline-block;
+  padding: 2.3rem 0;
 }
 
 /*? User Section Design */
 
-.user-section{
-    background-color: var(--bg-color);
-    margin: 11.7rem 15rem;
-    padding: 5rem 8rem;
-    border-radius: 2.4rem;
+.user-section {
+  background-color: var(--bg-color);
+  margin: 11.7rem 15rem;
+  padding: 5rem 8rem;
+  border-radius: 2.4rem;
 }
-.user-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-}
-
-.user-section h3{
-    font-size: 3.8rem;
-    text-align: center;
+.user-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
 }
 
-.user-section .inter-text h1{
-    font-size: 8rem;    
+.user-section h3 {
+  font-size: 3.8rem;
+  text-align: center;
 }
 
-.user-section .inter-text p{
-    font-size: 2rem;
-    color: var(--black-color);
-    font-weight: 300;
-    text-align: center;
+.user-section .inter-text h1 {
+  font-size: 8rem;
+}
+
+.user-section .inter-text p {
+  font-size: 2rem;
+  color: var(--black-color);
+  font-weight: 300;
+  text-align: center;
 }
 
 /*? User Feedback Section Design */
 
-.user-feedback{
-    margin: 11.7rem 15rem;
+.user-feedback {
+  margin: 11.7rem 15rem;
+  /* background-color: var(--white-color); */
 }
 
-.user-feedback-cards{
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 2rem;
+.user-feedback-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem;
 }
 
-.user-feedback h3{
-    font-size: 4.2rem;
-    color: var(--heading-color);
-    text-align: center;
+.user-feedback h3 {
+  font-size: 4.2rem;
+  color: var(--heading-color);
+  text-align: center;
 }
 
-.user-feedback h4{
-    font-size: 2rem;
-    color: var(--card-heading);
-    margin-top: 2rem;
+.user-feedback h4 {
+  font-size: 2rem;
+  color: var(--card-heading);
+  margin-top: 2rem;
 }
 
-.user-feedback p{
-    font-size: 1.5rem;
-    color: var(--card-heading);
-    font-weight: 300;
-    margin-top: 2rem;
+.user-feedback p {
+  font-size: 1.6rem;
+  color: var(--card-heading);
+  font-weight: 400;
+  margin-top: 2rem;
+  line-height: 2.24rem;
 }
 
-.user-feedback-card{
-    margin: 2.4rem;
+.user-feedback-card {
+  padding: 2.4rem;
+  border-radius: 1.4rem;
+  background-color: var(--white-color);
 }
 
-.reviewer-info{
-    margin-top: 2rem;
+.reviewer-info {
+  margin-top: 2rem;
 }
 
-.reviewer-info{
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
 }
 
-.reviewer-info img{
-    border-radius: 50%;
+.reviewer-info img {
+  border-radius: 50%;
 }
 
-.reviewer-info-content h5{
-    padding: .2rem;
+.reviewer-info-content h5 {
+  /* padding: 0.2rem; */
+  line-height: 2.24rem;
+  font-weight: 600;
+  color: var(--card-text-color);
+  font-size: 1.6rem;
+}
+
+.reviewer-info-content h6 {
+  /* padding: 0.2rem; */
+  /* line-height: 2.24rem; */
+  font-weight: 400;
+  color: var(--card-text-color);
+  font-size: 1.6rem;
+}
+
+/*? Newsletter Section Design */
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 9.22rem 15rem 1.4rem 15rem;
+  gap: 11.5rem;
+}
+
+.newsletter h1 {
+  font-size: 9.7rem;
+  padding: 7.1rem 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--black-color);
+  margin-bottom: 1rem;
+}
+
+.form-info input,
+textarea {
+  padding: 2rem 3.2rem;
+  width: 49.7rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.form-group textarea {
+  border: none;
+}
+
+.newsletter .btn-primary {
+  width: 49.7rem;
+  padding: 1.9rem 0;
+}
+
+/*? Footer Design */
+
+.footer-section {
+  background-color: var(--white-color);
+  padding: 10.4rem 45.4rem;
+}
+
+.footer-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.footer-nav ul a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--footer-nav);
+}
+
+.footer-content p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--footer-nav);
+  margin-top: 0.8rem;
+  text-align: center;
+  line-height: 2.4rem;
+}
+
+.footer-content h1 {
+  font-size: 10rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.footer-nav ul li {
+  list-style-type: none;
 }
