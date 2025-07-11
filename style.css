@@ -57,7 +57,12 @@ html {
   font-size: 1.6rem;
 }
 
-
+.btn-primary:hover {
+  transform: scale(1.005);
+  font-size: 1.8rem;
+  background-color: var(--btn-hover-color);
+  margin: 0;
+}
 
 /*? Header Design  */
 
